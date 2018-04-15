@@ -15,7 +15,22 @@ y2=sin(2*pi*f2*t);
 
 y=y1+y2;
 
-plot(t,y);
+subplot(2,1,1);
+plot(t,y)
+xlabel('time (t)')
+ylabel('am')
+title('{\bf origin wave}')
+
+
+FFTN= 100;
+xn=zeros(1,FFTN);
+
+subplot(2,1,2);
+plot(t,y1)
+xlabel('Frequency (Hz)')
+ylabel('Power')
+title('{\bf Periodogram}')
+
 
 
 
